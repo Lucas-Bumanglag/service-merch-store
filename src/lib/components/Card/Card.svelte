@@ -1,5 +1,5 @@
 <script lang="ts">
-    import placeholder from "../../../../static/placeholder.svg";
+    import placeholder from "./placeholder.svg";
     import { goto } from "$app/navigation";
 
     let { image, price, name } = $props<{
@@ -11,18 +11,18 @@
     let imageUrl = $derived(image ?? placeholder);
 </script>
 
-<div class="my-4 mx-5 flex flex-col overflow-hidden rounded-lg bg-white pb-4">
+<div class="m-4 flex flex-col overflow-hidden rounded-lg bg-white pb-4">
     <img 
         src={imageUrl} 
         onerror={() => { imageUrl = placeholder }}
         alt={name} 
-        class="w-full h-48 object-cover shadow-sm"
+        class="w-full aspect-square object-cover shadow-sm"
         loading="lazy"
     />
 
     <div class="p-4">
-        <h3 class="text-lg font-medium">{name}</h3>
-        <p class="text-gray-600">₱{price.toFixed(2)}</p>
+        <h3 class="text-md font-medium">{name}</h3>
+        <p class="text-sm">₱{price.toFixed(2)}</p>
     </div>
 
     <button 
