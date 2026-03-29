@@ -31,7 +31,7 @@
     </div>
 
     <!-- Catalog Grid -->
-    <div class="grid grid-cols-4 px-5 mx-5">
+    <div class="grid grid-cols-4 mt-10 gap-5">
         {#each products as product}
             <Card image={product.image} price={product.price} name={product.name} />
         {/each}

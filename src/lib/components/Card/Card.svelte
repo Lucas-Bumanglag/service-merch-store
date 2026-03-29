@@ -11,7 +11,7 @@
     let imageUrl = $derived(image ?? placeholder);
 </script>
 
-<div class="m-4 flex flex-col overflow-hidden rounded-lg bg-white pb-4">
+<div class="flex flex-col overflow-hidden rounded-lg bg-white pb-4">
     <img 
         src={imageUrl} 
         onerror={() => { imageUrl = placeholder }}
@@ -26,7 +26,7 @@
     </div>
 
     <button 
-        class="cursor-pointer w-2/3 mx-auto mt-auto text-sm px-auto py-1 border border-gray-300 text-gray-700 rounded-full hover:bg-black hover:text-white transition-colors"
+        class="cursor-pointer w-2/3 mx-auto mt-auto text-sm px-auto border border-gray-300 text-gray-700 rounded-full hover:bg-black hover:text-white transition-colors"
         onclick={() => goto('/add-to-cart')} // change accordingly
         >
         Buy
